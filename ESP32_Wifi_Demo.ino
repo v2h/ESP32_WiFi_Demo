@@ -121,14 +121,14 @@ int16_t L0X_getDistance(void)
     lox.rangingTest(&measure, false); // pass in 'true' to get debug data printout!
 
     if (measure.RangeStatus != 4) {  // phase failures have incorrect data
-      distance += measure.RangeMilliMeter / 10;
+      distance += measure.RangeMilliMeter;
       Serial.print("Distance (cm): "); Serial.println(measure.RangeMilliMeter / 10);
     } else {
       Serial.println(" out of range ");
       return 0;
     }
   }
-  return (distance / 5);
+  return (distance / (5*10));
 }
 
 void L0X_init(void)
