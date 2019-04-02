@@ -8,8 +8,6 @@
 #define DHTTYPE      DHT22
 #define BUILTIN_LED  25
 #define L0X_SHUTDOWN GPIO_NUM_13
-#define VEXT         21
-#define OLED_RST     16
 
 WiFiMulti WiFiMulti;
 DHT dht(DHTPIN, DHTTYPE); // temperature-humidity sensor
@@ -87,12 +85,12 @@ void Send_Data()
     data_to_send += String(distance);
     data_to_send += "\r\n\r\n";
 
+    Serial.print("Proximity: ");
+    Serial.println(distance);
     Serial.print("Temperature: ");
     Serial.println(temp);
     Serial.print("Humidity: ");
     Serial.println(hum);
-    Serial.print("Proximity: ");
-    Serial.println(distance);
 
     client.print("POST /update HTTP/1.1\n");
     client.print("Host: api.thingspeak.com\n");
