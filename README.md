@@ -5,7 +5,7 @@ This section is taken from another project that I took part in, [here](https://g
 ### 1.1 Arduino IDE
 Download and install the Arduino IDE from: https://www.arduino.cc/en/main/software
 
-### 1.2 Libraries
+### 1.2 Heltec Libraries
 Heltec support two sets of libraries to simplify the use of the integrated OLED, LoRa and other modules of the WIFI LoRa 32 (V2) board.
 
 #### 1.1.1 Heltec Board Support Package
@@ -45,3 +45,10 @@ Click the `Upload` button to upload the program to the board. Check the OLED dis
 Open `Tools->Serial Monitor` to see the printed messages. Make sure the baudrate is set to `115200`. To reset the program, simply upload the program again or press the hardware reset button on the board.
 
 Other examples are available within `Heltec ESP32 Dev-Boards`.
+
+### 1.3 Sensor Libraries
+#### 1.3.1 Installing the VL53L0X Adafruit Library
+Click on `Tools -> Manage Libraries...` and search for `VL53L0X`. Choose and install the `Adafruit_VL53L0X` library by Adafruit.
+
+#### 1.3.2 Installing the DHT Adafruit Library
+Click on `Tools -> Manage Libraries...` and search for `DHT`. Choose and install the `DHT sensor` library by Adafruit.
