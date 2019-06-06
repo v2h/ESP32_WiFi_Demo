@@ -6,7 +6,7 @@ This section is taken from another project that I took part in, [here](https://g
 Download and install the Arduino IDE from: https://www.arduino.cc/en/main/software
 
 ### 1.2 Heltec Libraries
-Heltec support two sets of libraries to simplify the use of the integrated OLED, LoRa and other modules of the WIFI LoRa 32 (V2) board.
+Heltec support two sets of libraries to simplify the use of the integrated OLED, LoRa and other modules of the WIFI LoRa 32 (V1) board.
 
 #### 1.1.1 Heltec Board Support Package
 [Note: this section is adapted from Heltec's instructions which can be accessed [here](https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/blob/master/InstallGuide/windows.md)]
@@ -24,14 +24,14 @@ Download the repository [Heltec_ESP32](https://github.com/HelTecAutomation/Helte
 
 Plug in the heltec board and wait for the drivers to install (if needed).
 
-Open the Arduino IDE, click on `Tools->Boards` and choose `Wifi_LoRa_32_V2`.
+Open the Arduino IDE, click on `Tools->Boards` and choose `Wifi_LoRa_32_1`.
 
 Click on `Sketch->Include Library->Add .Zip Libaries...`.
 
 In the pop-up window, navigate to `/Documents/Arduino/` and choose `Heltec_ESP32-master.zip`.
 
 #### 1.1.3 Running an OLED Example
-Make sure the chosen board is `Wifi_LoRa_32_V2`.
+Make sure the chosen board is `Wifi_LoRa_32`.
 
 ![choose_board](https://github.com/emrp/emrp2018_Moers_Trashbins/blob/master/pictures/sensor_node_ttn/choose_board.jpg)
 
@@ -54,9 +54,9 @@ Click on `Tools -> Manage Libraries...` and search for `VL53L0X`. Choose and ins
 Click on `Tools -> Manage Libraries...` and search for `DHT`. Choose and install the `DHT sensor` library by Adafruit.
 
 ## 2 Hardware Connections
-### 2.1 WIFI LoRa 32 (V2) Board Pinouts
-The originial pinout diagram provided by Heltec can be accessed [here](https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/blob/master/PinoutDiagram/WIFI_LoRa_32_V2.pdf). Below is a snapshot of the diagram.
-![Board pinouts](https://github.com/emrp/emrp2018_Moers_Trashbins/blob/master/pictures/sensor_node_ttn/WIFI_LoRA_32_V2_Pinouts.jpg)The pins used by the OLED module are fixed and are taken care of by the Heltec library.\
+### 2.1 WIFI LoRa 32 (V1) Board Pinouts
+The originial pinout diagram provided by Heltec can be accessed [here](https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/blob/master/PinoutDiagram/WIFI_LoRa_32_V1.pdf). Below is a snapshot of the diagram.
+![Board pinouts](https://github.com/emrp/emrp2018_Moers_Trashbins/blob/master/pictures/sensor_node_ttn/WIFI_LoRA_32_V1_Pinouts.jpg)The pins used by the OLED module are fixed and are taken care of by the Heltec library.\
 The pins used by the LoRa module are fixed and must be explicitly defined in the code to properly interface with the LMIC library (see [section 5.1.1](#511-overview)).
 
 ### 2.2 VL53L0X Connections
@@ -71,7 +71,7 @@ The VL53L0X breakout board provides the following pinouts:
  - GPIO1: Interrupt output
  - XSHUT: shutdown pin, active low. Driving this pin LOW will put the sensor to standby mode.
  
-The wiring between the VL53L0X breakout board and the WIFI LoRa 32 (V2) board should be as in the figure below.
+The wiring between the VL53L0X breakout board and the WIFI LoRa 32 (V1) board should be as in the figure below.
 
 <img src="https://github.com/emrp/emrp2018_Moers_Trashbins/blob/master/pictures/sensor_node_ttn/vl530x_esp32_wiring.jpg" height=70% width=70%>
 
